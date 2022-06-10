@@ -1,17 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AddItem from './components/AddItem.jsx'
 import $ from 'jquery';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      pens: [],
+      inks: [],
+      notebooks: []
+    }
+  }
 
+  componentDidMount () {
+    $.ajax({
+      url: '/',
+      method: 'GET',
+    }).then((data) => {
+      console.log('getting data', data)
+    })
+  }
+
+  submit(item) {
+    console.log(`${item.item} is being added`);
+    $.ajax({
+      url: '/addItem',
+      type: 'POST',
+      data: item,
+      dataType: 'json'
+    })
   }
 
   render () {
     return (
       <div>
         <h1>The Pen Book</h1>
+        <AddItem submitItem={this.submit.bind(this)}/>
+        {/* <PenCollection pens={this.state.pens}/>
+        <InkCollection inks={this.state.inks}/>
+        <NotebookCollection notebooks={this.state.notebooks}/> */}
       </div>
     )
   }
