@@ -26,6 +26,10 @@ let notebookSchema = mongoose.Schema({
   pen: []
 })
 
+let Pen = mongoose.model('Pen', penSchema);
+let Ink = mongoose.model('Ink', inkSchema);
+let Notebook = mongoose.model('Notebook', notebookSchema);
+
 let save = (data, cb) => {
   console.log('inside save', data)
   if (data.item === 'pen') {
@@ -51,15 +55,16 @@ let save = (data, cb) => {
 
 }
 
-let query = () => {
-  var pens = Pen.find({}).exec();
-  console.log(pens)
-  return pens;
+async function query(cb) {
+  try {
+    const results = await Pen.find({})
+    console.log(results)
+    cb(null, results)
+  } catch (e) {
+    console.log(e.message)
+    cb(e.message)
+  }
 }
-
-let Pen = mongoose.model('Pen', penSchema);
-let Ink = mongoose.model('Ink', inkSchema);
-let Notebook = mongoose.model('Notebook', notebookSchema);
 
 module.exports.save = save;
 module.exports.query = query;

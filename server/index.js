@@ -12,11 +12,16 @@ app.listen(port, () => {
   console.log(`app listening on port ${port}`)
 })
 
-app.get('/', (req, res) => {
-  db.query().then((results) => {
-    console.log('/', results);
-    res.send(results);
-  });
+app.get('/collection', (req, res) => {
+  db.query((err, data) => {
+    if (err) {
+      console.log('error loading')
+      res.sendStatus(404);
+    } else {
+      console.log(data)
+      res.status(200).json(data)
+    }
+  })
 })
 
 app.post('/addItem', (req, res) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Multiselect } from 'multiselect-react-dropdown'
 
 class AddItem extends React.Component {
   constructor(props) {
@@ -37,11 +38,11 @@ class AddItem extends React.Component {
   render() {
     return (
       <div>
-        <h2>Add to the collection</h2>
-        <h3>Item: <input type="text" value={this.state.item} onChange={this.onItemChange.bind(this)}/></h3>
-        <h3>Manufacturer: <input type="text" value={this.state.manufacturer} onChange={this.onManufacturerChange.bind(this)}/></h3>
-        <h3>Name: <input type="text" value={this.state.name} onChange={this.onNameChange.bind(this)}/></h3>
-        <h3>Image link: <input type="text" value={this.state.image} onChange={this.onImageChange.bind(this)}/></h3>
+        <h3>Add to the collection</h3>
+        <p>Item: <input type="text" value={this.state.item} onChange={this.onItemChange.bind(this)}/></p>
+        <p>Manufacturer: <input type="text" value={this.state.manufacturer} onChange={this.onManufacturerChange.bind(this)}/></p>
+        <p>Name: <input type="text" value={this.state.name} onChange={this.onNameChange.bind(this)}/></p>
+        <p>Image link: <input type="text" value={this.state.image} onChange={this.onImageChange.bind(this)}/></p>
         <button onClick={this.submit}>Add Item</button>
       </div>
     )
