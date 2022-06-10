@@ -30,36 +30,39 @@ let Pen = mongoose.model('Pen', penSchema);
 let Ink = mongoose.model('Ink', inkSchema);
 let Notebook = mongoose.model('Notebook', notebookSchema);
 
-let save = (data, cb) => {
-  console.log('inside save', data)
+async function save(data, cb) {
   if (data.item === 'pen') {
     var newPen = new Pen ({
       manufacturer: data.manufacturer,
       name: data.name,
       image: data.image
     })
-    newPen.save();
+    await newPen.save();
   } if (data.item === 'ink') {
     var newInk = new Ink ({
       manufacturer: data.manufacturer,
       name: data.name,
       image: data.image
     })
+    await newInk.save();
   } if (data.item === 'notebook') {
     var newNotebook = new Notebook ({
       manufacturer: data.manufacturer,
       name: data.name,
       image: data.image
     })
+    await newNotebook.save();
   }
-
 }
 
 async function query(cb) {
   try {
-    const results = await Pen.find({})
-    console.log(results)
-    cb(null, results)
+    const penResult = await Pen.find({});
+    const inkResult = await Ink.find({});
+    const notebookResult = await Notebook.find({});
+    var data = [penResult, inkResult, notebookResult];
+    console.log(data);
+    cb(null, data);
   } catch (e) {
     console.log(e.message)
     cb(e.message)

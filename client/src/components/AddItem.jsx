@@ -5,7 +5,7 @@ class AddItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      item: '',
+      item: 'pen',
       manufacturer: '',
       name: '',
       image: ''
@@ -39,7 +39,12 @@ class AddItem extends React.Component {
     return (
       <div>
         <h3>Add to the collection</h3>
-        <p>Item: <input type="text" value={this.state.item} onChange={this.onItemChange.bind(this)}/></p>
+        <label for="items">Item: </label>
+        <select name="items" value={this.state.item} onChange={this.onItemChange}>
+          <option value="pen">pen</option>
+          <option value="ink">ink</option>
+          <option value="notebook">notebook</option>
+        </select>
         <p>Manufacturer: <input type="text" value={this.state.manufacturer} onChange={this.onManufacturerChange.bind(this)}/></p>
         <p>Name: <input type="text" value={this.state.name} onChange={this.onNameChange.bind(this)}/></p>
         <p>Image link: <input type="text" value={this.state.image} onChange={this.onImageChange.bind(this)}/></p>
