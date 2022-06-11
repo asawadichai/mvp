@@ -1,6 +1,15 @@
+The Pen Book
+
+Organize and share your collection of pens, inks, and stationary. The Pen Book is a place to keep track of and show off your favorite writing instruments and accessories.
+Is your collection of pens growing too large? Do you forget what inks you’re currently using in your pens? The Pen Book makes it easy to organize your pens, inks, and notebooks by creating collections. Keep track of your entire collection, favorites, wish list, and previously owned products. Show off your top 5 pens or showcase your holy grail pen. Create custom collections like the perfect everyday carry collection by grouping your favorite pen, ink, and notebook combinations.
+“The Pen Book allows me to track and record my pen/ink/paper combinations and test what works and what doesn’t.” – The Daily Pen
+“I love sitting back and looking at my entire stationary collection. I appreciate my pens more now that I don’t forget what I have.” – Andrew Sawadichai, Hack Reactor Student
+ “I change ink colors often based on mood. This app lets me discover awesome pen and ink combinations that other users have shared and discussed.” – Fellow Pen Addict, User
+Re discover your love of pens today by signing up and sharing your collection.
+
 # Project Name #
 
-<!-- 
+<!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
 
 There is an approach called "working backwards" that is widely used at Amazon. They work backwards from the customer, rather than starting with an idea for a product and trying to bolt customers onto it. While working backwards can be applied to any specific product decision, using this approach is especially important when developing new products or features.
@@ -9,13 +18,13 @@ For new initiatives a product manager typically starts by writing an internal pr
 
 If the benefits listed don't sound very interesting or exciting to customers, then perhaps they're not (and shouldn't be built). Instead, the product manager should keep iterating on the press release until they've come up with benefits that actually sound like benefits. Iterating on a press release is a lot less expensive than iterating on the product itself (and quicker!).
 
-If the press release is more than a page and a half, it is probably too long. Keep it simple. 3-4 sentences for most paragraphs. Cut out the fat. Don't make it into a spec. You can accompany the press release with a FAQ that answers all of the other business or execution questions so the press release can stay focused on what the customer gets. My rule of thumb is that if the press release is hard to write, then the product is probably going to suck. Keep working at it until the outline for each paragraph flows. 
+If the press release is more than a page and a half, it is probably too long. Keep it simple. 3-4 sentences for most paragraphs. Cut out the fat. Don't make it into a spec. You can accompany the press release with a FAQ that answers all of the other business or execution questions so the press release can stay focused on what the customer gets. My rule of thumb is that if the press release is hard to write, then the product is probably going to suck. Keep working at it until the outline for each paragraph flows.
 
 Oh, and I also like to write press-releases in what I call "Oprah-speak" for mainstream consumer products. Imagine you're sitting on Oprah's couch and have just explained the product to her, and then you listen as she explains it to her audience. That's "Oprah-speak", not "Geek-speak".
 
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
- 
+
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
