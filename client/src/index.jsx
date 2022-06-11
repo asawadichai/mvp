@@ -22,7 +22,6 @@ class App extends React.Component {
       this.setState({pens: data[0]});
       this.setState({inks: data[1]});
       this.setState({notebooks: data[2]});
-      console.log(this.state)
     })
   }
 

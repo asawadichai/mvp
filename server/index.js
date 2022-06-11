@@ -34,7 +34,7 @@ app.post('/addItem', (req, res) => {
         res.sendStatus(404);
       } else {
         console.log(data)
-        res.status(200).json(data)
+        res.status(200).json(data);
       }
     })
   )
